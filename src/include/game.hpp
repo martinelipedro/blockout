@@ -3,19 +3,24 @@
 
 #include <array>
 #include <iostream>
+#include <optional>
 
 namespace blockout
 {
-    enum class Tile
+    enum Tile
     {
         Empty = 0,
         Player = 1,
         Obstacle = 2,
     };
-
-    static std::array<std::array<unsigned int, 8>, 8> worldMatrix{};
+    static unsigned int worldMatrix[8][8];
 
     void printWorldMatrix();
+    void setMatixValue(unsigned int x, unsigned int y, unsigned int value);
+    void swipeUp();
+    void swipeDown();
+    void swipeLeft();
+    void swipeRight();
 };
 
 #endif
